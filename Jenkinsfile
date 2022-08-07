@@ -23,7 +23,7 @@ pipeline{
         script {
           def strTest = 2+2>3?"Success":"Failure"
           echo strTest
-          sh 'mvn clean install' 
+          mvn clean install 
         }
       }
     }

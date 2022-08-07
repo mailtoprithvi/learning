@@ -13,6 +13,10 @@ pipeline{
     stage("test"){
       steps{
         echo "Testing the artefacts..."
+        script {
+          def strTest = 2+2>3?"Success":"Failure"
+          echo strTest
+        }
       }
     }
     stage("deploy"){

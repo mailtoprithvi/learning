@@ -2,7 +2,7 @@ pipeline{
   agent any
   tools {
     maven 'Maven'
-    jdk 'JDK1.8' 
+    jdk 'JDK11' 
   }
   stages{
     stage("setup"){
@@ -23,7 +23,7 @@ pipeline{
         script {
           def strTest = 2+2>3?"Success":"Failure"
           echo strTest
-          mvn clean install 
+          mvn -f ./h2/h2-parent/pom.xml clean install 
         }
       }
     }

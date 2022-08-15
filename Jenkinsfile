@@ -23,7 +23,7 @@ pipeline{
         script {
           def strTest = 2+2>3?"Success":"Failure"
           echo strTest
-          mvn -f ./h2/h2-parent/pom.xml clean install 
+          mvn clean install 
         }
       }
     }

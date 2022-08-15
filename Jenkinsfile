@@ -22,8 +22,10 @@ pipeline{
         echo "Building the project..."
         script {
           def strTest = 2+2>3?"Success":"Failure"
-          echo strTest
-          mvn clean install 
+          sh '''
+            echo strTest
+            mvn clean install 
+          '''
         }
       }
     }
